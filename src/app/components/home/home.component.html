@@ -7,7 +7,7 @@
                   <p class="tituloPrincipal">
                       Haz parte de nuestra <br> membresía y aprende con los mejores cursos en español.
                   </p>                            
-                  <a href="#" class="btn btn-secondary btn-lg bottonPrincipal" role="button">Ver Cursos</a>
+                  <a (click)="verCursos()" class="btn btn-secondary btn-lg bottonPrincipal" >Ver Cursos</a>
                   <a href="#" class="btn btn-secondary btn-lg bottonPrincipal" role="button">Ver planes</a>                            
               </div>
           </div>
@@ -17,159 +17,29 @@
 <div class="row seccionCursosHome seccionClara paddingSecciones">
   <div class="col-lg-1"></div>
   <div class="col-lg-10">
-      <div class="content">
-          <div class="row titulo">
-              <div class="col-lg-2">
-                 <h3>Cursos </h3>                                
-              </div>
-              <div class="col-lg-10 bordeLinea"></div>
-          </div>
-          <div class="row paddingSecciones seccionMargin">
-              <div class="col-lg-6 PaddingCuadrado">
-                  <div class="cadradoGigante">
-                      
-                  </div>
-              </div>
-              <div class="col-lg-6 ">
-                  <div class="content">
-                      <div class="row">
-                          <div class="col-lg-4 PaddingCuadrado">
-                              <div class="cuadradochico"></div>
-                          </div>
-                          <div class="col-lg-4 PaddingCuadrado">
-                              <div class="cuadradochico"></div>
-                          </div>
-                          <div class="col-lg-4 PaddingCuadrado">
-                              <div class="cuadradochico"></div>
-                          </div>
-                          <div class="col-lg-4 PaddingCuadrado">
-                              <div class="cuadradochico"></div>
-                          </div>
-                          <div class="col-lg-4 PaddingCuadrado">
-                              <div class="cuadradochico"></div>
-                          </div>
-                          <div class="col-lg-4 PaddingCuadrado">
-                              <div class="cuadradochico"></div>
-                          </div>
-                      </div>                                
-                  </div>
-              </div>
-          </div>
-          <div class="row justify-content-md-center">
-              <div class="col-lg-4 textoCentrado">
-                  <a href="#" class="btn btn-secondary btn-lg bottonPrincipal" role="button">Ver más cursos</a>
-              </div>
-          </div>
-      </div>
+      <app-seccion-cursos2col  [cursos]="courses" ></app-seccion-cursos2col>
   </div>
 </div>
+
 <div class="row seccionCursosHome seccionOscura ">
   <div class="col-lg-1"></div>
   <div class="col-lg-10">
-      <div class="content">
-          <div class="row titulo">
-              <div class="col-lg-2">
-                 <h3>Cursos <strong>Zbrush</strong></h3> 
-                     
-              </div>
-              <div class="col-lg-10 bordeLinea"></div>
-          </div>
-          <div class="row justify-content-md-center">
-              <div class="col-lg-3 PaddingCuadrado">
-                  <div class="cuadrado paddingRightchico">
-                  Nombre del curso
-                  </div>
-              </div>
-              <div class="col-lg-3 PaddingCuadrado">
-                  <div class="cuadrado paddingRightchico">
-                  Nombre del curso
-                  </div>
-              </div> 
-              <div class="col-lg-3 PaddingCuadrado">
-                  <div class="cuadrado paddingRightchico">
-                  Nombre del curso
-                  </div>
-              </div> 
-              <div class="col-lg-3 PaddingCuadrado">
-                  <div class="cuadrado paddingRightchico">
-                  Nombre del curso
-                  </div>
-              </div>  
-          </div>
-          
-      </div>
-      <div class="content paddingSecciones ">
-          <div class="row titulo">
-              <div class="col-lg-2">
-                 <h3>Cursos <strong>Gratis</strong></h3> 
-                     
-              </div>
-              <div class="col-lg-10 bordeLinea"></div>
-          </div>
-          <div class="row justify-content-md-center">
-              <div class="col-lg-3 PaddingCuadrado">
-                  <div class="cuadrado paddingRightchico">
-                  Nombre del curso
-                  </div>
-              </div>
-              <div class="col-lg-3 PaddingCuadrado">
-                  <div class="cuadrado paddingRightchico">
-                  Nombre del curso
-                  </div>
-              </div> 
-              <div class="col-lg-3 PaddingCuadrado">
-                  <div class="cuadrado paddingRightchico">
-                  Nombre del curso
-                  </div>
-              </div> 
-              <div class="col-lg-3 PaddingCuadrado">
-                  <div class="cuadrado paddingRightchico">
-                  Nombre del curso
-                  </div>
-              </div>  
-          </div>
-          
-      </div>
-  </div>
+      <app-seccion-cursos class="content" [cursos]="coursesZbrush" nombre="ZBrush"></app-seccion-cursos>
+      <app-seccion-cursos class="content" [cursos]="coursesFree" nombre="Gratis"></app-seccion-cursos>    
+      
+      <br><br>
+    </div>
 </div>
+
 <div class="row seccionCursosHome seccionClara ">
   <div class="col-lg-1"></div>
   <div class="col-lg-10">
-      <div class="content">
-          <div class="row titulo justify-content-md-center">
-              <div class="col-lg-12 textoCentrado">
-                  <p class="tituloSecciongrande">
-                      Próximamente                                
-                  </p>
-              </div>                        
-          </div>
-          <div class="row justify-content-md-center">
-              <div class="col-lg-3 PaddingCuadrado">
-                  <div class="cuadrado paddingRightchico">
-                  Nombre del curso
-                  </div>
-              </div>
-              <div class="col-lg-3 PaddingCuadrado">
-                  <div class="cuadrado paddingRightchico">
-                  Nombre del curso
-                  </div>
-              </div> 
-              <div class="col-lg-3 PaddingCuadrado">
-                  <div class="cuadrado paddingRightchico">
-                  Nombre del curso
-                  </div>
-              </div> 
-              <div class="col-lg-3 PaddingCuadrado">
-                  <div class="cuadrado paddingRightchico">
-                  Nombre del curso
-                  </div>
-              </div>  
-          </div>                    
-      </div>                
+      <app-seccion-cursos [cursos]="courseNew" nombre="Próximamente"></app-seccion-cursos>
+    
   </div>
 </div>
-<div id="galeria" class="row galeria2">
-  
+
+<div id="galeria" class="row galeria2">  
   <div class="col-lg-10">
       <div class="content">
           <div class="row  ">
@@ -177,13 +47,10 @@
                   <p class="tituloPrincipalGrande">
                       Próximo <br> Curso en vivo
                   </p>
-                  <a href="#" class="btn btn-secondary btn-lg bottonPrincipal" role="button">Más información</a>
-                  
-                  
+                  <a href="#" class="btn btn-secondary btn-lg bottonPrincipal" role="button">Más información</a>                   
               </div>
-
           </div>
-
       </div>
   </div>
 </div>
+  
