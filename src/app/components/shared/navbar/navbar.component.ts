@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 declare var  $: any;
 @Component({
@@ -8,10 +8,12 @@ declare var  $: any;
 export class NavbarComponent implements OnInit {
   
   constructor() { }
-
+  @Input() usuarioLogiado=false;
+  @Input() usuario: any;
   ngOnInit() {
   }
   verRegistro(){
-    $('#myModal').modal('show');
+    
+    $('#modalLogin').modal('show');
   }
 }

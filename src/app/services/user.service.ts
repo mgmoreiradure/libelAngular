@@ -17,13 +17,16 @@ export class UserService{
      });     
  } 
  signup(user_to_login, gethash = null){
-     let json = JSON.stringify(user_to_login);
-     let params=json;
+    if(gethash != null){
+        user_to_login.gethash= gethash;
+    }  
+    let json= JSON.stringify(user_to_login);
+    let params = json;
+    
      let headers = new HttpHeaders({'Content-Type': 'application/json'});
      return this.http.post(this.url + 'login', params, {headers: headers})
-     .pipe( map(data =>{
-         return data;
-     }));
+     .pipe(map(res => res)); 
+     
  }
 
 }

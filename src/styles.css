@@ -80,7 +80,10 @@ body {
 .botonVioleta {
   background-color: #8224E3;
   border-color: #8224E3; }
-
+  
+  botonVioleta:disabled {
+    background-color: #8224E3!important;
+    border-color: #8224E3!important; }
 .botonVioleta:hover {
   background-color: #ac66f5;
   border-color: #8224E3; }
@@ -213,7 +216,6 @@ footer {
 
 .formularioCentral {
   background-color: white;
-  margin-top: 150px;
   padding: 58px 60px; }
 
 .paddinCursoDelMes {

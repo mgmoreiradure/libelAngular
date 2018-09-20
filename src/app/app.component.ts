@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'libelAngular';
-
-
+  logueado=false;
+  usuarioSession:any[]=[];
 
 
   abilitar(idx: boolean){
     if(idx== true){
-      alert("logueado");
+      this.logueado=true;
     }else{
-      alert("no logueado");
+      this.logueado=false;
     }
   }
 }

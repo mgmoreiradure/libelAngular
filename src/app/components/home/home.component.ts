@@ -35,12 +35,12 @@ export class HomeComponent implements OnInit {
       }
       if(req.coursesZbrush){
         this.coursesZbrush= req.coursesZbrush;
-        console.log(this.coursesZbrush);
+     
 
       }
       if(req.course1){
         this.course1=req.course1;
-        console.log(this.course1);
+        
       }
     });
     
