@@ -1,0 +1,109 @@
+<!-- Large modal -->
+
+
+<div id="modalRegistro" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content">
+        <div *ngIf="!mostrarmsjFinal" class="container">
+              <div class="row justify-content-md-center">
+                  <div class="col-md-10 formularioCentral">
+                        <h1 class="tituloFormulario">Iniciar Seción</h1>
+                      <p class="tituloClarito">Si aun no tienes una cuenta <a href="#" class="linkVioleta">Registrate Aquí</a></p>
+                      <form [formGroup]="registerForm" (ngSubmit)="logiarse()" novalidate="novalidate">
+                            <div class="form-group">                            
+                                    <input 
+                                    formControlName="username"
+                                    type="text" 
+                                    class="form-control"                                                                  
+                                    placeholder="Nombre de usuario">   
+                                    <div *ngIf="registerForm.controls['username'].errors?.required && registerForm.controls['username'].touched" 
+                                        class="form-control-feedback">
+                                            El nombre de usuario es necesario
+                                    </div>                                                                                                                              
+                            </div>
+                            <div class="form-group">                            
+                                <input 
+                                formControlName="firstname"
+                                type="text" 
+                                class="form-control"                                                                      
+                                placeholder="Nombre">   
+                                <div *ngIf="registerForm.controls['firstname'].errors?.required && registerForm.controls['firstname'].touched" 
+                                    class="form-control-feedback">
+                                        El nombre es necesario
+                                </div>                                                                                                                                      
+                            </div>
+                            <div class="form-group">                            
+                                    <input 
+                                    formControlName="lastname"
+                                    type="text" 
+                                    class="form-control"                                                                          
+                                    placeholder="Apellido">   
+                                    <div *ngIf="registerForm.controls['lastname'].errors?.required && registerForm.controls['lastname'].touched" 
+                                        class="form-control-feedback">
+                                            El apellido es necesario
+                                    </div>                                                                                                                                              
+                            </div>                
+                          <div class="form-group">                            
+                              <input 
+                              formControlName="email"
+                              type="email" 
+                              class="form-control"                              
+                              aria-describedby="emailHelp" 
+                              placeholder="Correo electrónico">   
+                              <div *ngIf="registerForm.controls['email'].errors?.required && registerForm.controls['email'].touched" 
+                                  class="form-control-feedback">
+                                      El email es necesario
+                              </div> 
+                              <div *ngIf="registerForm.controls['email'].errors?.pattern && registerForm.controls['email'].touched" 
+                                  class="form-control-feedback">
+                                      El email no tiene formato correcto
+                              </div>  
+                                                                                   
+                          </div>
+                          <div class="form-group">                            
+                              <input 
+                              formControlName="password"
+                              type="password" 
+                              class="form-control" 
+                              placeholder="Contraseña">
+                              <div *ngIf="registerForm.controls['password'].errors?.required && registerForm.controls['password'].touched" 
+                                  class="form-control-feedback">
+                                      La contraseña es necesaria
+                              </div>
+                              
+                          </div>
+                          <div class="form-group">                            
+                                <input 
+                                formControlName="confpassword"
+                                type="password" 
+                                class="form-control" 
+                                placeholder="Confirmar contraseña">
+                                <div *ngIf="registerForm.controls['confpassword'].errors?.required && registerForm.controls['confpassword'].touched" 
+                                    class="form-control-feedback">
+                                        La contraseña es necesaria
+                                </div>
+                                
+                            </div>
+                          
+                          <button type="submit" [disabled]="registerForm.status !='VALID'" class="btn btn-primary botonRedondo botonVioleta">Registrarse</button>
+                      </form>
+                                        
+                      <br>
+                      <br>
+                      <div *ngIf="mostrarmsj" class="alert alert-danger" role="alert">
+                              {{errorMessage}}
+                      </div>
+                    <div>
+                      <p class="tituloClarito">O registrate con:</p>
+                      <a href="#" class="btn btn-primary botonRedondo botonFacebook">Facebook</a>  <a href="#"class="btn btn-danger botonRedondo botonGoogle">Google+</a>
+                    </div>
+                  </div>
+              </div>
+         </div> 
+         <div *ngIf="mostrarmsjFinal" class="container">
+             En la brevedad recibira un email para que confirme su correo electronico
+             <button type="submit" (click)="cerrar()" class="btn btn-primary botonRedondo botonVioleta">Salir</button>
+         </div>
+    </div>
+  </div>
+  </div>

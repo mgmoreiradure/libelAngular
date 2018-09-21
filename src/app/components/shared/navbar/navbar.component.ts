@@ -14,6 +14,6 @@ export class NavbarComponent implements OnInit {
   }
   verRegistro(){
     
-    $('#modalLogin').modal('show');
+    $('#modalRegistro').modal('show');
   }
 }

@@ -28,5 +28,13 @@ export class UserService{
      .pipe(map(res => res)); 
      
  }
+ registrarse(user_to_register){
+    let json= JSON.stringify(user_to_register);
+    let params = json;
+    
+     let headers = new HttpHeaders({'Content-Type': 'application/json'});
+     return this.http.post(this.url + 'register', params, {headers: headers})
+     .pipe(map(res => res)); 
+ }
 
 }
